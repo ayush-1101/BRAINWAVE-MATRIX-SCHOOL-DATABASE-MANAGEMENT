@@ -1,0 +1,6 @@
+SELECT A.assignment_id, A.assignment, A.student_id, A.teacher_id, A.submit_date, T.name, S.name, T.department, A.department_id
+	FROM public."ASSIGNMENT" as A
+	INNER JOIN public. "TEACHERS" as T
+	ON A.teacher_id = T.teacher_id  
+	INNER JOIN public."STUDENTS" as S
+	ON A.student_id = S.student_id
